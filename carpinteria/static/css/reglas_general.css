@@ -1,0 +1,88 @@
+:root {
+    --color-beige: #B7AEA5;
+    --color-naranja: #F77014;
+    --color-rojo: #E33C08;
+    --color-gris: #433D3D;
+    --color-negro: #221D21;
+}
+
+/* estilos generales de las paginas*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background:linear-gradient(to right,var(--color-beige) , var(--color-naranja));
+}
+
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #F77014;
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 16px;
+}
+
+.navbar-nav {
+    margin-left: 200px;
+}
+
+.nav-link {
+    color: #FFFFFF !important;
+    padding: 10px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: #B7AEA5 !important;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #F77014;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.btn-primary:active {
+    background-color: var(--color-rojo) !important; /* Cambia al color rojo */
+    border-color: var(--color-rojo) !important; /* Cambia el borde al color rojo */
+    box-shadow: none !important; /* Opcional: elimina el efecto de sombra */
+}
+
+.btn-primary {
+    background-color: var(--color-naranja);
+    border-color: var(--color-naranja);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-rojo);
+    border-color: var(--color-rojo);
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Lucida Handwriting', cursive;
+    color: var(--color-naranja);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 30px;
+    width: 250px;  /* Ancho del marco del logo */
+    height: 150px; /* Alto del marco del logo */
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+}

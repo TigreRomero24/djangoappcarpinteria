@@ -19,9 +19,20 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from aplicaciones.empresa.views import *
+from aplicaciones.trabajadores.views import *
+from aplicaciones.productos.views import *
+from aplicaciones.proveedores.views import *
 
 urlpatterns = [
+    path('',inicio, name='inicio'),
     path('admin/', admin.site.urls),
     path('empresa/', empresadefecto.as_view()),
-    path('nueva/', empresanueva.as_view(),),
+    path('nueva_empresa/', empresanueva.as_view(),),
+    path('trabajadores/', trabajadordefecto.as_view()),
+    path('nuevo_trabajador/', creartrabajadores.as_view()),
+    path('productos/', productos_defecto.as_view()),
+    path('nuevo_producto/', producto_nuevo.as_view()),
+    path('proveedores/', proveedores_defecto.as_view()),
+    path('nuevo_proveedor/', proveedor_nuevo.as_view()),
+
 ]

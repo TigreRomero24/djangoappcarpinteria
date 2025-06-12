@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.views.generic import TemplateView,ListView, CreateView, UpdateView, DeleteView
 from .models import *
 
+def inicio(request):
+    return render(request, 'inicio.html')
 
-# Create your views here.
 class empresadefecto(TemplateView):
     template_name = 'empresadefecto.html'
 
