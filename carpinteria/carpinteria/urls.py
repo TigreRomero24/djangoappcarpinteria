@@ -26,13 +26,16 @@ from aplicaciones.proveedores.views import *
 urlpatterns = [
     path('',inicio, name='inicio'),
     path('admin/', admin.site.urls),
-    path('empresa/', empresadefecto.as_view()),
+    path('empresa/', listar_empresa.as_view()),
     path('nueva_empresa/', empresanueva.as_view(),),
-    path('trabajadores/', trabajadordefecto.as_view()),
-    path('nuevo_trabajador/', creartrabajadores.as_view()),
-    path('productos/', productos_defecto.as_view()),
+    path('productos/', listar_productos.as_view()),
     path('nuevo_producto/', producto_nuevo.as_view()),
-    path('proveedores/', proveedores_defecto.as_view()),
+    path('proveedores/', listar_proveedores.as_view()),
     path('nuevo_proveedor/', proveedor_nuevo.as_view()),
+    path('trabajadores/', listartrabajadores.as_view()),
+    path('nuevo_trabajador/', creartrabajadores.as_view()),
 
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -3,12 +3,13 @@ from django.views.generic import ListView,CreateView,UpdateView,DeleteView, Temp
 from .models import *
 
 
-class proveedores_defecto(TemplateView):
-    template_name = 'proveedores_defecto.html'
-
 class proveedor_nuevo(CreateView):
     template_name = 'proveedor_nuevo.html'
     model = Proveedor
     fields = '__all__'
     success_url = '/productos/'
 
+class listar_proveedores(ListView):
+    template_name = 'listar_proveedores.html'
+    model = Proveedor
+    context_object_name = 'proveedores'

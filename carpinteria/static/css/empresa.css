@@ -1,0 +1,94 @@
+/* Paleta de colores del Grupo 3 */
+:root {
+    --color-beige: #B7AEA5;
+    --color-naranja: #F77014;
+    --color-rojo: #E33C08;
+    --color-gris: #433D3D;
+    --color-negro: #221D21;
+}
+
+/* Contenedor principal */
+.nosotros-containerf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+/* Empresa-info en la parte superior */
+.empresa-info {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+
+/* Contenedor para los tres elementos en horizontal */
+
+
+/* Contenido lateral */
+.contenedor-lateral {
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+/* Imagen central */
+.contenedor-centro_img {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.contenedor-centro_img img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.empresa-logo {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.fundacion {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: var(--color-gris);
+    width: 100%;
+}
+
+.espaciado {
+    margin-left: 40px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .nosotros-containerf {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contenedor-lateral, .contenedor-centro_img {
+        width: 100%;
+        max-width: 100%;
+        margin: 1px 0;
+    }
+}
