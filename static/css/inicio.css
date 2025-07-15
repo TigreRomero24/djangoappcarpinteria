@@ -1,0 +1,93 @@
+/* Paleta de colores del Grupo 3 */
+:root {
+    --color-beige: #B7AEA5;
+    --color-naranja: #F77014;
+    --color-rojo: #E33C08;
+    --color-gris: #433D3D;
+    --color-negro: #221D21;
+    --color-oliva: rgb(128, 128, 0)
+}
+
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--color-beige);
+}
+
+.vision-mision {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.carousel-img {
+    height: 75vh;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  /* Overlay oscuro suave */
+  .carousel-item::before {
+    content: "";
+    position: relative;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+  }
+
+.carousel-caption h2,
+.carousel-caption p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 2s ease-in-out;
+}
+
+
+.carousel-item.active .carousel-caption h2,
+.carousel-item.active .carousel-caption p {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+  /* Posicionar texto sobre overlay */
+.carousel-caption {
+    position: absolute;
+    background-color: var(--color-oliva);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .carousel-inner {
+    background-color: #cccaca;
+  }
+
+
+.contenedor-lateral {
+    flex: 1;
+    align-items: center;
+    min-width: 250px;
+    max-width: 50%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

@@ -1,0 +1,71 @@
+/* Paleta de colores del Grupo 3 */
+:root {
+    --color-beige: #B7AEA5;
+    --color-naranja: #F77014;
+    --color-rojo: #E33C08;
+    --color-gris: #433D3D;
+    --color-negro: #221D21;
+}
+
+/* Contenedor principal */
+.nosotros-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+/* Empresa-info en la parte superior */
+.empresa-info {
+    text-align: start;
+    font-size: 19px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+
+/* Contenido lateral */
+.contenedor-lateral {
+    flex: 1;
+    align-items: center;
+    min-width: 250px;
+    max-width: 40%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.empresa-logo {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.empresa-logo img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+span.fundacion {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: var(--color-gris);
+    width: 100%;
+}
+

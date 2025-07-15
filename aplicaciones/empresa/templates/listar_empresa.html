@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/reglas_general.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
+    <title>Empresa - MADERISTICA</title>
+</head>
+<body>
+
+    <!-- Contenedor para el logo -->
+    <div class="logo-container">
+        <span class="empresa-name"> MADERISTICA</span>
+        <img src="{% static 'img/logo.jpg' %}" alt="Logo de GREENSCAPE" class="logo">
+    </div>
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Contenido de Productos -->
+    <div class="container">
+        <div class="nosotros-container">
+            {% for em in empresa %}
+                <div>
+                    <a href="/actualizar_empresa/{{ em.id }}" class="btn btn-add">
+                        <i class="fas fa-edit"></i> Editar Empresa
+                    </a>
+                    <a href="/eliminar_empresa/{{ em.id }}" class="btn btn-add">
+                        <i class="fas fa-trash"></i> Eliminar Empresa
+                    </a>
+                </div>
+                <div class="empresa-info">
+                    <h2>{{ em.nombre }}</h2>
+                    <p class="text-start">RUC: {{ em.ruc }}</p>
+                    <p class="text-start">Dirección: {{ em.direccion }}</p>
+                </div>
+                <div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+                    <div class="contenedor-lateral">
+                        <div class="empresa-logo">
+                            <img src="{{ em.imagen.url }}" alt="Empresa" class="img">
+                        </div>
+                        <h4>Año de Fundación</h4>
+                        <span class="fundacion">{{ em.yearfunda|date:"j \d\e F \d\e Y" }}</span>
+                    </div>
+                    <div class="contenedor-lateral">
+                        <div>
+                            <h3>Misión</h3>
+                            <p> {{ em.mision }}</p>
+                            <h3>Visión</h3>
+                            <p>{{ em.vision }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+            <!-- Mensaje si no hay empresa registrada -->
+                <div class="nosotros-container ">
+                    <h3>No existe una empresa registrada</h3>
+                    <p class="empty-message">Comience agregando su empresa.</p>
+                </div>
+                <a href="/nueva_empresa" class="btn btn-add">
+                    <i class="fas fa-plus"></i> Agregar una Empresa
+                </a>
+
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Contenedor para el pie de página -->
+    <footer>
+        <div class="footer">
+            <div class="footer p">
+                <p>&copy; 2025 - Maderistica. Todos los derechos reservados Grupo 3.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
