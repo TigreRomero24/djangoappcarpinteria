@@ -1,0 +1,129 @@
+:root {
+    --color-beige: #B7AEA5;
+    --color-naranja: #F77014;
+    --color-rojo: #E33C08;
+    --color-gris: #433D3D;
+    --color-negro: #221D21;
+    --color-oliva: rgb(128, 128, 0)
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff !important;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: var(--color-oliva);
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar-nav {
+    margin-left: 200px;
+}
+
+.nav-link {
+    color: #FFFFFF !important;
+    padding: 10px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--color-beige) !important;
+}
+
+.footer {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.btn-primary:active {
+    background-color: var(--color-rojo) !important;
+    border-color: var(--color-rojo) !important;
+    box-shadow: none !important;
+}
+
+.btn-primary {
+    background-color: var(--color-naranja);
+    border-color: var(--color-naranja);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-rojo);
+    border-color: var(--color-rojo);
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Lucida Handwriting', cursive;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-negro);
+    margin-bottom: 15px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 250px;
+    height: 150px;
+}
+
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.btn-add {
+    background-color: var(--color-oliva);
+    border-color: var(--color-beige);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: end;
+}
+
+span.empresa-name {
+    color: #221D21;
+    padding: 40px;
+    font-family: 'Lucida Handwriting';
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.btn-guardar {
+    background-color:rgb(85, 107, 47);
+    color:#fff;
+}

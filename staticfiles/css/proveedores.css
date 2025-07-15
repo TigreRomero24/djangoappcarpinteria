@@ -1,0 +1,45 @@
+/* Paleta de colores del Grupo 3 */
+:root {
+    --color-beige: #B7AEA5;
+    --color-naranja: #F77014;
+    --color-rojo: #E33C08;
+    --color-gris: #433D3D;
+    --color-negro: #221D21;
+}
+
+.proveedores-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.proveedores-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-gris);
+}
+
+.proveedor-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.proveedor-info {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.proveedor-info h5 {
+    color: var(--color-gris);
+    margin-bottom: 10px;
+}
+
+.proveedor-info p {
+    margin-bottom: 5px;
+    color: #666;
+}
